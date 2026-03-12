@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photo Gallery of Modern Food Express - Food photography, restaurant interior, and customer moments.">
+  <meta name="keywords" content="Modern Food Express gallery, restaurant photos Bhadohi, food photos Sufinagar, restaurant interior UP">
+  <title>Photo Gallery | Modern Food Express — Food & Restaurant</title>
+  <link rel="canonical" href="gallery.html">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .lightbox { display: none; position: fixed; inset: 0; z-index: 2000; background: rgba(0,0,0,0.95); align-items: center; justify-content: center; }
+    .lightbox.open { display: flex; }
+    .lightbox-content { text-align: center; }
+    .lightbox-emoji { font-size: 12rem; display: block; }
+    .lightbox-caption { color: var(--text-dim); margin-top: 16px; font-size: 1rem; }
+    .lightbox-close { position: absolute; top: 24px; right: 32px; font-size: 2rem; color: var(--white); cursor: pointer; background: none; border: none; transition: color 0.3s; }
+    .lightbox-close:hover { color: var(--gold); }
+  </style>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍽️</text></svg>">
+</head>
+<body>
+<a href="#main-content" class="skip-link">Skip to main content</a>
+<div class="page-loader"><div class="loader-logo">MFE</div><div class="loader-bar"><div class="loader-fill"></div></div></div>
+<nav class="navbar" aria-label="Main navigation" role="navigation">
+  <a href="index.html" class="nav-logo"><div class="nav-logo-icon">🍽️</div><div><div class="nav-logo-text">Modern Food <span>Express</span></div><div class="nav-logo-sub">NH-2, Sufinagar · Bhadohi, UP</div></div></a>
+  <ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="menu.html">Menu</a></li><li><a href="specials.html">Specials</a></li><li><a href="gallery.html" class="active">Gallery</a></li><li><a href="reviews.html">Reviews</a></li><li><a href="offers.html">Offers</a></li><li><a href="reservation.html" class="nav-cta">Book Table</a></li></ul>
+  <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" type="button"><span></span><span></span><span></span></div>
+</nav>
+<div class="menu-overlay"></div>
+<div class="mobile-menu"><a href="index.html">🏠 Home</a><a href="about.html">ℹ️ About Us</a><a href="menu.html">🍽️ Menu</a><a href="specials.html">⭐ Specials</a><a href="gallery.html">📸 Gallery</a><a href="reviews.html">💬 Reviews</a><a href="offers.html">🎁 Offers</a><a href="reservation.html">📅 Book Table</a><a href="contact.html">📞 Contact</a></div>
+
+<div class="page-hero">
+  <div class="page-hero-content">
+    <div class="page-hero-label">Visual Journey</div>
+    <h1 class="page-hero-title">Our <span>Gallery</span></h1>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="document.getElementById('lightbox').classList.remove('open')">✕</button>
+  <div class="lightbox-content">
+    <span class="lightbox-emoji" id="lightbox-emoji">🍔</span>
+    <div class="lightbox-caption" id="lightbox-caption">Food</div>
+  </div>
+</div>
+
+<section class="section" style="background: var(--dark);">
+  <div class="container">
+    <div class="section-header-center" style="margin-bottom: 50px;">
+      <div class="section-label"><div class="section-label-line"></div><span>Our Moments</span><div class="section-label-line"></div></div>
+      <h2 class="section-title fade-up">A Feast for the <span class="gold italic">Eyes</span></h2>
+      <div class="gold-divider center"></div>
+      <p class="section-desc fade-up">Captured moments of delicious food, beautiful spaces, and happy customers — all from Modern Food Express.</p>
+    </div>
+
+    <!-- FOOD GALLERY -->
+    <div class="section-label" style="margin-bottom: 24px;"><div class="section-label-line"></div><span>Food Photography</span></div>
+    <div class="gallery-grid fade-up">
+      <div class="gallery-item large" onclick="openLightbox('🍔','Double Smash Burger — Our #1 Bestseller')">
+        🍔<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('🍜','Dragon Fire Noodles — Signature Special')">
+        🍜<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('🥟','Crispy Momos — Street Food Elevated')">
+        🥟<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('🍕','Farm Veggie Pizza — Fresh & Delicious')">
+        🍕<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('🍛','Paneer Butter Masala — Rich & Creamy')">
+        🍛<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('🍗','Chicken Tikka Platter — Tandoor Fresh')">
+        🍗<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('🥤','Chocolate Milkshake — Thick & Creamy')">
+        🥤<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+      </div>
+      <div class="gallery-item large" onclick="openLightbox('🍰','Dessert Platter — Sweet Endings')">
+        🍰<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('🥗','Fresh Salad Bowl — Healthy Options')">
+        🥗<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+      </div>
+    </div>
+
+    <!-- INTERIOR -->
+    <div style="margin-top: 60px;">
+      <div class="section-label" style="margin-bottom: 24px;"><div class="section-label-line"></div><span>Restaurant Interior</span></div>
+      <div class="gallery-grid fade-up">
+        <div class="gallery-item" onclick="openLightbox('🪑','Comfortable seating with ambient lighting')">
+          🪑<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+        </div>
+        <div class="gallery-item large" onclick="openLightbox('🏮','Our beautifully lit dining area')">
+          🏮<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('👨‍🍳','Our chefs at work in the kitchen')">
+          👨‍🍳<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('🌸','Elegant table decor')">
+          🌸<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('✨','The ambiance that makes dining special')">
+          ✨<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('🎂','Private celebration setups available')">
+          🎂<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CUSTOMER MOMENTS -->
+    <div style="margin-top: 60px;">
+      <div class="section-label" style="margin-bottom: 24px;"><div class="section-label-line"></div><span>Customer Moments</span></div>
+      <div class="gallery-grid fade-up">
+        <div class="gallery-item large" onclick="openLightbox('👨‍👩‍👧‍👦','Family dining at Modern Food Express')">
+          👨‍👩‍👧‍👦<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('💑','Couples enjoying a special dinner')">
+          💑<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('🎉','Birthday celebrations with us')">
+          🎉<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('😋','Pure happiness with every bite')">
+          😋<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+        </div>
+        <div class="gallery-item large" onclick="openLightbox('🤝','Friendly staff making every visit special')">
+          🤝<div class="gallery-overlay"><div class="gallery-zoom">🔍</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-banner">
+  <div class="cta-banner-content"><h2 class="cta-banner-title">Create Your Own <span class="gold">Beautiful Moments</span></h2><p class="cta-banner-desc">Book a table and be part of the Modern Food Express experience.</p><div class="cta-actions"><a href="reservation.html" class="btn-primary">📅 Book Table</a><a href="contact.html" class="btn-secondary">📞 Contact Us</a></div></div>
+</div>
+
+<footer>
+  <div class="footer-grid">
+    <div><a href="index.html" class="nav-logo" style="display:inline-flex;"><div class="nav-logo-icon">🍽️</div><div><div class="nav-logo-text">Modern Food <span>Express</span></div><div class="nav-logo-sub">NH-2, Sufinagar · Bhadohi, UP</div></div></a><p class="footer-brand-desc">Premium fast food & family restaurant in Sufinagar, Jangiganj, Bhadohi. Crafted with love.</p><div class="footer-socials"><a href="https://wa.me/919415354062" class="social-btn">💬</a><a href="#" class="social-btn">📘</a><a href="#" class="social-btn">📷</a></div></div>
+    <div><div class="footer-heading">Quick Links</div><ul class="footer-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="menu.html">Menu</a></li><li><a href="specials.html">Specials</a></li></ul></div>
+    <div><div class="footer-heading">More</div><ul class="footer-links"><li><a href="reviews.html">Reviews</a></li><li><a href="reservation.html">Reservation</a></li><li><a href="offers.html">Offers</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div><div class="footer-heading">Contact</div><ul class="footer-links"><li><a href="#">📍 NH-2 G.T. Road, Sufinagar, Bhadohi UP</a></li><li><a href="tel:+919415354062">📞 +91 94153 54062</a></li><li><a href="https://wa.me/919415354062">💬 WhatsApp</a></li></ul></div>
+  </div>
+  <div class="footer-bottom"><p>© 2024 <span>Modern Food Express</span>. All rights reserved.</p><p>Made with ❤️ for food lovers in Bhadohi, UP</p></div>
+</footer>
+<a href="https://wa.me/919415354062" class="whatsapp-float" target="_blank">💬</a>
+
+<script src="js/script.js"></script>
+<script>
+function openLightbox(emoji, caption) {
+  document.getElementById('lightbox-emoji').textContent = emoji;
+  document.getElementById('lightbox-caption').textContent = caption;
+  document.getElementById('lightbox').classList.add('open');
+}
+document.getElementById('lightbox').addEventListener('click', function(e) {
+  if (e.target === this) this.classList.remove('open');
+});
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') document.getElementById('lightbox').classList.remove('open');
+});
+</script>
+</body>
+</html>
